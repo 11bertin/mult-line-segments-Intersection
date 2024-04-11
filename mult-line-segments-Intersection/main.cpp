@@ -50,7 +50,7 @@ void main(int argc,char** argv)
 	glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
 	glutInitWindowSize(screenWidth,screenHeight);
 	glutInitWindowPosition(100,100);
-	glutCreateWindow("Look!");
+	glutCreateWindow("test");
 	glutDisplayFunc(myDisplay);
 	glutReshapeFunc(reshape);
 	myInit();
