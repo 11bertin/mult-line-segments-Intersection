@@ -23,7 +23,7 @@ struct POrder
 #define ORD_LOWER 1
 #define ORD_INTE 2
 
-#define NUM_PT 30
+constexpr auto NUM_PT = 30;
 
 #define NO_LINE -1
 
