@@ -3,6 +3,7 @@
 #include "gl/glu.h"
 #include "gl/glut.h"
 #include "findInte.h"
+#include <iostream>
 
 //Calculate the coordinate of an intersection point by the coordinates of upper and lower points of two lines.
 int intePt(float xa1, float ya1, float xa0, float ya0, float xb1, float yb1, float xb0, float yb0, int n1, int n2, float x_scan, float y_scan)
@@ -162,6 +163,11 @@ void findIntersection(float pt[][2])
 
 	//Initialize the original points and ordered list.
 	initPt(ordHead, pt);
+	//Êä³öpt
+	for (int i = 0; i < NUM_PT; i++)
+	{
+		std::cout << "pt[" << i<<"]" << pt[i][0] << "  " << pt[i][1] << std::endl;
+	}
 
 	//Draw the original points and lines.
 	glPointSize(3.0);
@@ -322,6 +328,7 @@ void findIntersection(float pt[][2])
 	glBegin(GL_POINTS);
 	glColor3f(0.0, 0.0, 1.0);
 	for (i = 0;i < _inteCount;i++)
+		std::cout<<"inte["<<i<<"]"<<"["<<inte[i][0]<<"  "<<inte[i][1]<<"]"<<std::endl;
 		glVertex2f(inte[i][0], inte[i][1]);
 	glEnd();
 }

@@ -44,7 +44,7 @@ void reshape(int width,int height)
 	glLoadIdentity();
 }
 
-void main(int argc,char** argv)
+int main(int argc,char** argv)
 {
 	glutInit(&argc,argv);
 	glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
@@ -55,4 +55,5 @@ void main(int argc,char** argv)
 	glutReshapeFunc(reshape);
 	myInit();
 	glutMainLoop();
+	return 0;
 }
